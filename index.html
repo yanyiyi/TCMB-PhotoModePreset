@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>國家文化記憶庫</h1>
+    <h2>直接進入圖片搜尋模式</h2>
+    <form id="myForm" method="get">
+        <input type="text" name="keyW" id="keyW">
+        <input type="button" value="搜尋" onclick="tcmbSearch()">
+    </form>
+    <script>
+        function tcmbSearch() {
+            var keyWords = document.getElementById("keyW").value;
+            var keyURL = "https://memory.culture.tw/Home/Result?Keyword=" + keyWords + "&SearchMode=Precise&LanguageMode=Transfer&viewmode=pic&PageSize=250&OrderColumn=imilarity";
+            window.location.assign(keyURL);
+        }
+
+    </script>
+</body>
+
+</html>
